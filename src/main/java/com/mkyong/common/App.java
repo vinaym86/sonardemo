@@ -1,41 +1,45 @@
-package com.mkyong.common;
-
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        int i =0;
-        if (i == common) {
-        throw new EmptyStackException();
-    }
-        
-  Record city;
-  lnode *list = NULL;
-
-  while (data_to_read()) {
-    Readin_data(&city);
-    insert(&city, &list);
-  }
+package com.myjava.exceptions;
+ 
+public class MyOwnException {
+    public static void main(String[] a){
+        try{
+            MyOwnException.myTest(null);
+        } catch(MyAppException mae){
+            System.out.println("Inside catch block: "+mae.getMessage());
+        }
+    }
+     
+    static void myTest(String str) throws MyAppException{
+        if(str == null){
+            throw new MyAppException("String val is null");
+        }
+    }
 }
-
-void insert(Record*& city, lnode*& list) {
-  lnode* ptr = new lnode;
-  ptr->next = list;
-  list = ptr;
-  prt->data = city;
-}
-
-    	ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
-    	 
-        HelloWorld obj = (HelloWorld) context.getBean("helloBean");
-        obj.printHello();
-        
-    }
+ 
+class MyAppException extends Exception {
+ 
+    private String message = null;
+ 
+    public MyAppException() {
+        super();
+    }
+ 
+    public MyAppException(String message) {
+        super(message);
+        this.message = message;
+    }
+ 
+    public MyAppException(Throwable cause) {
+        super(cause);
+    }
+ 
+    @Override
+    public String toString() {
+        return message;
+    }
+ 
+    @Override
+    public String getMessage() {
+        return message;
+    }
 }
