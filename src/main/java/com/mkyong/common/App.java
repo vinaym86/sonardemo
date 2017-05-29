@@ -12,7 +12,7 @@ public class App
     public static void main( String[] args )
     {
         int i =0;
-        if (i == 0) {
+        if (i == common) {
         throw new EmptyStackException();
     }
     	ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
