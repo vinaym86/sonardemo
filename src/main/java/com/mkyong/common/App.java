@@ -11,8 +11,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        int i;
-        int result = i/0;
+        int i =0;
+        if (i == 0) {
+        throw new EmptyStackException();
+    }
     	ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
     	 
         HelloWorld obj = (HelloWorld) context.getBean("helloBean");
