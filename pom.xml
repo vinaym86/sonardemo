@@ -9,6 +9,11 @@
   <url>http://maven.apache.org</url>
   
   <dependencies>
+	   <dependency>
+      <groupId>com.google.code.findbugs</groupId>
+      <artifactId>findbugs</artifactId>
+      <version>${findbugsVersion}</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -26,15 +31,17 @@
     
   </dependencies>
 	<reporting>
+		<excludeDefaults>true</excludeDefaults>
     <plugins>
-      <plugin>
+	    
+	        <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
         <version>3.0.1</version>
         <configuration>
-          <xmlOutput>true</xmlOutput>
+           <skip>true</skip>
           <!-- Optional directory to put findbugs xdoc xml report -->
-          <xmlOutputDirectory>findbugsXml</xmlOutputDirectory>
+          <xmlOutputDirectory>target/site</xmlOutputDirectory>
         </configuration>
       </plugin>
 	    <plugin>
