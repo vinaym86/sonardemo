@@ -48,6 +48,7 @@
     </plugin>
     </plugins>
   </reporting>
+	<profiles>
 	<profile>
     <id>coverage</id>
     <build>
@@ -161,7 +162,7 @@
         </plugins>
     </build>
 </profile>
-	
+	</profiles>
 	
 	
 </project>
