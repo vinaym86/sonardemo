@@ -107,7 +107,7 @@
 <!-- Jacoco output file for UTs -->
 <jacoco.out.ut.file>jacoco-ut.exec</jacoco.out.ut.file>
 <!-- Tells Sonar where the Jacoco coverage result file is located for Unit Tests -->
-<sonar.jacoco.reportPath>${jacoco.outputDir}/${jacoco.out.ut.file}</sonar.jacoco.reportPath>
+<sonar.jacoco.reportPath>target/jacoco.exec</sonar.jacoco.reportPath>
 <!-- Jacoco output file for ITs -->
 <jacoco.out.it.file>jacoco-it.exec</jacoco.out.it.file>
 <!-- Tells Sonar where the Jacoco coverage result file is located for Integration Tests -->
