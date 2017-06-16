@@ -41,7 +41,7 @@
         <configuration>
            <skip>true</skip>
           <!-- Optional directory to put findbugs xdoc xml report -->
-          <xmlOutputDirectory>target/site</xmlOutputDirectory>
+          
         </configuration>
       </plugin>
 	    <plugin>
